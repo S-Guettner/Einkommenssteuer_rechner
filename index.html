@@ -8,29 +8,30 @@
     <link href="/dist/output.css" rel="stylesheet">
 </head>
 <body class="flex justify-center items-center h-screen">
-    <form class=" text-center rounded-md border-2 border-sky-700 p-2 w-1/4 h-60" onsubmit="return false" >
+    <form class=" shadow-xl text-center rounded-md border-2 border-sky-700 p-2 w-1/4 h-66" onsubmit="return false" >
         <div class="mb-2">
             <label for="tarif">Grundtarif</label>
-            <input checked type="radio" name="tarif" id="grundtarif">
+            <input checked class=" cursor-pointer" type="radio" name="tarif" id="grundtarif">
             <label for="tarif">Splittingtarif</label>
-            <input type="radio" name="tarif" id="splittingtarif">
+            <input class=" cursor-pointer" type="radio" name="tarif" id="splittingtarif">
         </div>
         <div class="mb-2">
             <label for="steuerjahr">2020</label>
-            <input type="radio" name="steuerjahr" id="zweitausenzwanzig">
+            <input class=" cursor-pointer" type="radio" name="steuerjahr" id="zweitausenzwanzig">
             <label for="steuerjahr">2021</label>
-            <input type="radio" name="steuerjahr" id="zweitausendeinundzwanzig">
+            <input class=" cursor-pointer" type="radio" name="steuerjahr" id="zweitausendeinundzwanzig">
             <label for="steuerjahr">2022</label>
-            <input checked type="radio" name="steuerjahr" id="zweitausendzweiundzwanzig">
+            <input class=" cursor-pointer" checked type="radio" name="steuerjahr" id="zweitausendzweiundzwanzig">
         </div>
         <div>
             <label class=" block mb-1" for="einkommen">Jahreseinkommen</label>
-            <input placeholder="€" class=" hover:bg-slate-300 mb-4 bg-slate-200 text-center" type="number" name="einkommen" id="einkommenInput">
+            <input placeholder="€" class="  hover:bg-slate-300 mb-4 bg-slate-200 text-center" type="number" name="einkommen" id="einkommenInput">
         </div>
         <div>
             <input onclick="calculate()" id="button" class="  hover:bg-slate-600 hover:text-white p-1 px-4 mb-2 rounded-md bg-slate-400 cursor-pointer" name="berechnen" type="submit" value="Berechnen">
         </div>
         <p class="mb-1">Einkommenssteuer</p>
+        <p class=" hidden" id="changepP">pro Person</p>
         <p class=" w-1/2 mx-auto bg-slate-200 after:content-['€']" id="output"></p>
     </form>
         

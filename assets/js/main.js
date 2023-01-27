@@ -12,7 +12,7 @@ const einkommenInput = document.getElementById("einkommenInput")
 const button = document.getElementById("button")
 /* ========== output ====================== */
 let output = document.getElementById("output")
-
+let changepP = document.getElementById("changepP")
 
 /* ============ variables global ============ */
 let freiBetrag
@@ -29,10 +29,17 @@ let steuerVariable7
 let einkommen
 let einkommenssteuer
 
+/* fügt bei splittingtarif pro Person hinzu */
+grundtarif.addEventListener('change', () =>{
+    changepP.style.display="none";
+})
+splittingtarif.addEventListener('change', () =>{
+    changepP.style.display="block"
+})
 
 const calculate = () =>{
 /* ================ prüft tarif ==================*/
-    splittingtarif.checked ? einkommen = Number(einkommenInput.value) / 2 : einkommen = Number(einkommenInput.value)
+    splittingtarif.checked ? einkommen = ((Number(einkommenInput.value) / 2) ) : einkommen = Number(einkommenInput.value)
 
 /* ================= prüft steuerjahr und weist variablen werte hinzu ===========*/
     /* 2020 */
