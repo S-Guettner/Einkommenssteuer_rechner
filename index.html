@@ -8,7 +8,7 @@
     <link href="/dist/output.css" rel="stylesheet">
 </head>
 <body class="flex justify-center items-center h-screen">
-    <form class=" text-center border-2 p-2 w-3/6 h-60" onsubmit="return false" >
+    <form class=" text-center rounded-md border-2 border-sky-700 p-2 w-1/3 h-60" onsubmit="return false" >
         <div class="mb-2">
             <label for="tarif">Grundtarif</label>
             <input checked type="radio" name="tarif" id="grundtarif">
@@ -25,13 +25,13 @@
         </div>
         <div>
             <label class=" block mb-1" for="einkommen">Jahreseinkommen</label>
-            <input placeholder="€" class=" mb-4 bg-slate-200" type="number" name="einkommen" id="einkommenInput">
+            <input placeholder="€" class=" mb-4 bg-slate-200 text-center" type="number" name="einkommen" id="einkommenInput">
         </div>
         <div>
-            <input onclick="calculate()" id="button" class=" mb-2 bg-slate-500 cursor-pointer" name="berechnen" type="submit" value="Berechnen">
+            <input onclick="calculate()" id="button" class="  hover:bg-slate-600 hover:text-white p-1 px-4 mb-2 rounded-md bg-slate-400 cursor-pointer" name="berechnen" type="submit" value="Berechnen">
         </div>
         <p>Einkommenssteuer</p>
-        <p class=" bg-slate-200" id="output"></p>
+        <p class=" bg-slate-200 after:content-['€']" id="output"></p>
     </form>
         
 

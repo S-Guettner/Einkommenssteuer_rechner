@@ -625,6 +625,10 @@ video {
   width: 50%;
 }
 
+.w-2\/6 {
+  width: 33.333333%;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -637,12 +641,45 @@ video {
   justify-content: center;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
 .border {
   border-width: 1px;
 }
 
 .border-2 {
   border-width: 2px;
+}
+
+.border-sky-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(2 132 199 / var(--tw-border-opacity));
+}
+
+.border-sky-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(186 230 253 / var(--tw-border-opacity));
+}
+
+.border-sky-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(125 211 252 / var(--tw-border-opacity));
+}
+
+.border-sky-800 {
+  --tw-border-opacity: 1;
+  border-color: rgb(7 89 133 / var(--tw-border-opacity));
+}
+
+.border-sky-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(3 105 161 / var(--tw-border-opacity));
 }
 
 .bg-slate-900 {
@@ -665,6 +702,16 @@ video {
   background-color: rgb(100 116 139 / var(--tw-bg-opacity));
 }
 
+.bg-slate-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
+}
+
+.bg-slate-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -675,6 +722,21 @@ video {
 
 .p-10 {
   padding: 2.5rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .text-center {
@@ -689,4 +751,69 @@ video {
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.content-\[\'Hello_World\'\] {
+  --tw-content: 'Hello World';
+  content: var(--tw-content);
+}
+
+.before\:content-\[\'Hello_World\'\]::before {
+  --tw-content: 'Hello World';
+  content: var(--tw-content);
+}
+
+.after\:content-\[\'Hello_World\'\]::after {
+  --tw-content: 'Hello World';
+  content: var(--tw-content);
+}
+
+.after\:content-\[\'Hello_Worl\'\]::after {
+  --tw-content: 'Hello Worl';
+  content: var(--tw-content);
+}
+
+.after\:content-\[\'Hell\'\]::after {
+  --tw-content: 'Hell';
+  content: var(--tw-content);
+}
+
+.after\:content-\[\'Hel\'\]::after {
+  --tw-content: 'Hel';
+  content: var(--tw-content);
+}
+
+.after\:content-\[\'He\'\]::after {
+  --tw-content: 'He';
+  content: var(--tw-content);
+}
+
+.after\:content-\[\'H\'\]::after {
+  --tw-content: 'H';
+  content: var(--tw-content);
+}
+
+.after\:content-\[\'\'\]::after {
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
+.after\:content-\[\'\20AC\'\]::after {
+  --tw-content: '€';
+  content: var(--tw-content);
+}
+
+.hover\:bg-slate-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
