@@ -33,6 +33,7 @@ const calculate = () =>{
     let steuerVariable5
     let steuerVariable6
     let steuerVariable7
+    
     splittingtarif.checked ? einkommen = Number(einkommenInput.value) / 2 : einkommen = Number(einkommenInput.value)
     console.log(einkommen);
 
@@ -49,10 +50,15 @@ const calculate = () =>{
     }
     else if(einkommen > steuerGrenze1 && einkommen <= steuerGrenze2){
         let z = (einkommen - steuerGrenze1) / 10000;
-        einkommenssteuer = (steuerVariable3 * z + 2397) * z + steuerVariable4
+        einkommenssteuer = (steuerVariable3 * z + steuerVariable4) * z + steuerVariable5
         return Number(einkommenssteuer.toFixed(2));
     }
     else if(einkommen > steuerGrenze2 && einkommen <= steuerGrenze3){
-        
+        einkommenssteuer = 0.42 * einkommen - steuerVariable6
+        return Number(einkommenssteuer.toFixed(2));
+    }
+    else{
+        einkommenssteuer = 0.45 * einkommen - steuerVariable7
+        return Number(einkommenssteuer.toFixed(2));
     }
 }
