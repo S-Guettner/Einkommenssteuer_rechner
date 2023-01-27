@@ -8,6 +8,33 @@
     <link href="/dist/output.css" rel="stylesheet">
 </head>
 <body>
-    <p class="text-red-500 text-2xl">hello</p>
+    <form class=" text-center" onsubmit="return false" >
+        <div>
+            <label for="tarif">Grundtarif</label>
+            <input checked type="radio" name="tarif" id="grundtarif">
+            <label for="tarif">Splittingtarif</label>
+            <input type="radio" name="tarif" id="splittingtarif">
+        </div>
+        <div>
+            <label for="steuerjahr">2020</label>
+            <input type="radio" name="steuerjahr" id="zweitausenzwanzig">
+            <label for="steuerjahr">2021</label>
+            <input type="radio" name="steuerjahr" id="zweitausendeinundzwanzig">
+            <label for="steuerjahr">2022</label>
+            <input checked type="radio" name="steuerjahr" id="zweitausendzweiundzwanzig">
+        </div>
+        <div>
+            <label for="einkommen">Jahreseinkommen</label>
+            <input placeholder="€" class=" bg-slate-200" type="number" name="einkommen" id="einkommenInput">
+        </div>
+        <div>
+            <input id="button" class=" bg-slate-500 cursor-pointer" name="berechnen" type="submit" value="Berechnen">
+        </div>
+    </form>
+        <p id="output">
+
+        </p>
+
+        <script src="./assets/js/main.js"></script>
 </body>
 </html>
