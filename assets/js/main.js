@@ -11,7 +11,7 @@ const einkommenInput = document.getElementById("einkommenInput")
 /* submit */
 const button = document.getElementById("button")
 /* ========== output ====================== */
-const output = document.getElementById("output")
+let output = document.getElementById("output")
 
 
 /* ============ variables global ============ */
@@ -35,30 +35,40 @@ const calculate = () =>{
     let steuerVariable7
     
     splittingtarif.checked ? einkommen = Number(einkommenInput.value) / 2 : einkommen = Number(einkommenInput.value)
-    console.log(einkommen);
+
 
 
     zweitausenzwanzig.checked ? (steuerVariable1 = 972.87,steuerVariable2 = 1400,steuerVariable3 = 212.02,steuerVariable4 = 2397,steuerVariable5 = 972.79,steuerVariable6 = 8963.74,steuerVariable7 = 17078.74,freiBetrag = 9408,steuerGrenze1 = 14532, steuerGrenze2 = 57051, steuerGrenze3 = 270500) : zweitausendeinundzwanzig.checked ? (steuerVariable1 = 995.21,steuerVariable2 = 1400,steuerVariable3 = 208.85,steuerVariable4 = 2397,steuerVariable5 = 950.96,steuerVariable6 = 9136.63,steuerVariable7 = 17374.99,freiBetrag = 9744, steuerGrenze1 = 14753, steuerGrenze2 = 57918, steuerGrenze3 = 274612) : (steuerVariable1 = 1088.67,steuerVariable2 = 1400,steuerVariable3 = 206.43,steuerVariable4 = 2397,steuerVariable5 = 869.32,steuerVariable6 = 9336.45,steuerVariable7 = 17671.20, freiBetrag = 10347, steuerGrenze1 = 14926, steuerGrenze2 = 58596, steuerGrenze3 = 277825)
     
     if(einkommen <= freiBetrag){
-        return einkommenssteuer = 0
+        einkommenssteuer = 0
+        console.log(Number(einkommenssteuer));
     }
     else if(einkommen > freiBetrag && einkommen <= steuerGrenze1){
         let y = (einkommen - freiBetrag) / 10000;
-        einkommenssteuer =  (steuerVariable1 * y + steuerVariable2) * y;
-        return Number(einkommenssteuer.toFixed(2));
+        einkommenssteuer =  ((steuerVariable1 * y + steuerVariable2) * y).toFixed(2);
+        console.log(Number(einkommenssteuer));
     }
     else if(einkommen > steuerGrenze1 && einkommen <= steuerGrenze2){
         let z = (einkommen - steuerGrenze1) / 10000;
-        einkommenssteuer = (steuerVariable3 * z + steuerVariable4) * z + steuerVariable5
-        return Number(einkommenssteuer.toFixed(2));
+        einkommenssteuer = ((steuerVariable3 * z + steuerVariable4) * z + steuerVariable5).toFixed(2)
+        console.log(Number(einkommenssteuer));
     }
     else if(einkommen > steuerGrenze2 && einkommen <= steuerGrenze3){
-        einkommenssteuer = 0.42 * einkommen - steuerVariable6
-        return Number(einkommenssteuer.toFixed(2));
+        einkommenssteuer = (0.42 * einkommen - steuerVariable6).toFixed(2)
+        console.log(Number(einkommenssteuer));
     }
     else{
-        einkommenssteuer = 0.45 * einkommen - steuerVariable7
-        return Number(einkommenssteuer.toFixed(2));
+        einkommenssteuer = (0.45 * einkommen - steuerVariable7).toFixed(2)
+        console.log(Number(einkommenssteuer));
     }
+    output.innerHTML=einkommenssteuer
 }
+
+
+
+
+
+
+
+
