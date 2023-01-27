@@ -3,7 +3,7 @@
 const grundtarif = document.getElementById("grundtarif")
 const splittingtarif = document.getElementById("splittingtarif")
 /* steuerjahr */
-const zweitausenzwanzig = document.getElementById("zweitausenzwanzig")
+const zweitausendzwanzig = document.getElementById("zweitausendzwanzig")
 const zweitausendeinundzwanzig = document.getElementById("zweitausendeinundzwanzig")
 const zweitausendzweiundzwanzig = document.getElementById("zweitausendzweiundzwanzig")
 /* einkommen */
@@ -43,7 +43,7 @@ const calculate = () =>{
 
 /* ================= prüft steuerjahr und weist variablen werte hinzu ===========*/
     /* 2020 */
-    zweitausenzwanzig.checked ? (steuerVariable1 = 972.87,steuerVariable2 = 1400,steuerVariable3 = 212.02,steuerVariable4 = 2397,steuerVariable5 = 972.79,steuerVariable6 = 8963.74,steuerVariable7 = 17078.74,freiBetrag = 9408,steuerGrenze1 = 14532, steuerGrenze2 = 57051, steuerGrenze3 = 270500)
+    zweitausendzwanzig.checked ? (steuerVariable1 = 972.87,steuerVariable2 = 1400,steuerVariable3 = 212.02,steuerVariable4 = 2397,steuerVariable5 = 972.79,steuerVariable6 = 8963.74,steuerVariable7 = 17078.74,freiBetrag = 9408,steuerGrenze1 = 14532, steuerGrenze2 = 57051, steuerGrenze3 = 270500)
     /* 2021 */
     : zweitausendeinundzwanzig.checked ? (steuerVariable1 = 995.21,steuerVariable2 = 1400,steuerVariable3 = 208.85,steuerVariable4 = 2397,steuerVariable5 = 950.96,steuerVariable6 = 9136.63,steuerVariable7 = 17374.99,freiBetrag = 9744, steuerGrenze1 = 14753, steuerGrenze2 = 57918, steuerGrenze3 = 274612)
     /* 2022 */
