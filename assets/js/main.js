@@ -19,22 +19,16 @@ const freiBetrag2020 = 9408
 const freiBetrag2021 = 9744
 const freiBetrag2022 = 10347
 
-button.addEventListener('click', () =>{
+let steuerGrenze1
+let steuerGrenze2
+let steuerGrenze3
+let steuerGrenze4
+
+const calculate = () =>{
     let einkommen
     splittingtarif.checked ? einkommen = Number(einkommenInput.value) / 2 : einkommen = Number(einkommenInput.value)
     console.log(einkommen);
 
-    
-})
+    zweitausenzwanzig.checked ? 
+}
 
-/* const tarif = () =>{
-    let einkommen = parseInt(einkommenInput.value);
-    splittingtarif.checked ? einkommen/2 : einkommen * 1; 
-    console.log(einkommen);
-} */
-
-
-/* 
-const calculate = () =>{
-    
-} */
