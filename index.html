@@ -7,15 +7,15 @@
     <title>Document</title>
     <link href="/dist/output.css" rel="stylesheet">
 </head>
-<body>
-    <form class=" text-center" onsubmit="return false" >
-        <div>
+<body class="flex justify-center items-center h-screen">
+    <form class=" text-center border-2 p-2 w-3/6 h-60" onsubmit="return false" >
+        <div class="mb-2">
             <label for="tarif">Grundtarif</label>
             <input checked type="radio" name="tarif" id="grundtarif">
             <label for="tarif">Splittingtarif</label>
             <input type="radio" name="tarif" id="splittingtarif">
         </div>
-        <div>
+        <div class="mb-2">
             <label for="steuerjahr">2020</label>
             <input type="radio" name="steuerjahr" id="zweitausenzwanzig">
             <label for="steuerjahr">2021</label>
@@ -24,16 +24,16 @@
             <input checked type="radio" name="steuerjahr" id="zweitausendzweiundzwanzig">
         </div>
         <div>
-            <label for="einkommen">Jahreseinkommen</label>
-            <input placeholder="€" class=" bg-slate-200" type="number" name="einkommen" id="einkommenInput">
+            <label class=" block mb-1" for="einkommen">Jahreseinkommen</label>
+            <input placeholder="€" class=" mb-4 bg-slate-200" type="number" name="einkommen" id="einkommenInput">
         </div>
         <div>
-            <input onclick="calculate()" id="button" class=" bg-slate-500 cursor-pointer" name="berechnen" type="submit" value="Berechnen">
+            <input onclick="calculate()" id="button" class=" mb-2 bg-slate-500 cursor-pointer" name="berechnen" type="submit" value="Berechnen">
         </div>
+        <p>Einkommenssteuer</p>
+        <p class=" bg-slate-200" id="output"></p>
     </form>
-        <p class=" text-center" id="output">
-
-        </p>
+        
 
         <script src="./assets/js/main.js"></script>
 </body>
