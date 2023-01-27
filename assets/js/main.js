@@ -35,8 +35,11 @@ const calculate = () =>{
     splittingtarif.checked ? einkommen = Number(einkommenInput.value) / 2 : einkommen = Number(einkommenInput.value)
 
 /* ================= prüft steuerjahr und weist variablen werte hinzu ===========*/
+    /* 2020 */
     zweitausenzwanzig.checked ? (steuerVariable1 = 972.87,steuerVariable2 = 1400,steuerVariable3 = 212.02,steuerVariable4 = 2397,steuerVariable5 = 972.79,steuerVariable6 = 8963.74,steuerVariable7 = 17078.74,freiBetrag = 9408,steuerGrenze1 = 14532, steuerGrenze2 = 57051, steuerGrenze3 = 270500)
+    /* 2021 */
     : zweitausendeinundzwanzig.checked ? (steuerVariable1 = 995.21,steuerVariable2 = 1400,steuerVariable3 = 208.85,steuerVariable4 = 2397,steuerVariable5 = 950.96,steuerVariable6 = 9136.63,steuerVariable7 = 17374.99,freiBetrag = 9744, steuerGrenze1 = 14753, steuerGrenze2 = 57918, steuerGrenze3 = 274612)
+    /* 2022 */
     : (steuerVariable1 = 1088.67,steuerVariable2 = 1400,steuerVariable3 = 206.43,steuerVariable4 = 2397,steuerVariable5 = 869.32,steuerVariable6 = 9336.45,steuerVariable7 = 17671.20, freiBetrag = 10347, steuerGrenze1 = 14926, steuerGrenze2 = 58596, steuerGrenze3 = 277825)
 
 /*================ prüft steuergrenzen ======================*/
