@@ -67,7 +67,6 @@ const calculate = () =>{
     else{
         einkommenssteuer = (0.45 * einkommen - steuerVariable7).toFixed(2)
     }
-
 /* =============== output ================ */
     output.innerHTML = einkommenssteuer
 }
