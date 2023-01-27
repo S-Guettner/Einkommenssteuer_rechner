@@ -39,7 +39,7 @@ splittingtarif.addEventListener('change', () =>{
 
 const calculate = () =>{
 /* ================ prüft tarif ==================*/
-    splittingtarif.checked ? einkommen = ((Number(einkommenInput.value) / 2) ) : einkommen = Number(einkommenInput.value)
+    splittingtarif.checked ? einkommen = (Number(einkommenInput.value) / 2)  : einkommen = Number(einkommenInput.value)
 
 /* ================= prüft steuerjahr und weist variablen werte hinzu ===========*/
     /* 2020 */
